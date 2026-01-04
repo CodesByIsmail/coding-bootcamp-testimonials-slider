@@ -1,9 +1,219 @@
+    /* .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); } */
+    
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+    
+
 :root{
-  --Blue-950: hsl(240, 38%, 20%);
-  --Gray-400: hsl(240, 18%, 77%);
+    --Blue-950: hsl(240, 38%, 20%);
+    --Gray-400: hsl(240, 18%, 77%);
+    --white: hsl(0, 0%, 100%);
 }
 
 *{
-  margin: 0;
-  padding: 0;
+    margin:0 ;
+    padding: 0;
+    object-fit: cover;
 }
+
+p{
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+body{
+    height: 100vh;
+    background: url(images/pattern-curve.svg);
+    background-repeat: no-repeat;
+background-position: left   bottom;
+background-size: fill;
+
+}
+
+.testimonial__wrapper{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.testimonial__container{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    transition: opacity 1s, translate 1s;
+    
+   
+}
+
+.slide{
+
+overflow: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.testimonial{
+    height: 100%;
+    /* background: var(--Blue-950); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 4rem;
+    /* opacity: 0; */
+    /* translate: -100%; */
+    transition: opacity 1s, transform 1s;
+
+}
+
+
+.testimonial .img__slide{
+    width: 200px;
+    height: 200px;
+    border-radius: 1rem;
+    box-shadow: 0px 20px 20px rgb(0, 0, 0, 0.1);
+}
+
+.image__slide{
+    background-image: url(images/pattern-bg.svg);
+    padding: 2rem;
+background-repeat: no-repeat;
+background-position: center ;
+background-size: contain;
+
+}
+
+.testi__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-image: url(images/pattern-quotes.svg);
+background-repeat: no-repeat;
+background-position: top center ;
+background-size: fill;
+}
+
+
+.testi__content p{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.testimonial .details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.details .name{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.details .job{
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    color: var(--Gray-400);
+}
+
+.slide__active{
+    /* translate: 0%; */
+    opacity: 1;
+}
+
+.btnSlides{
+    background: var(--white);
+    display: flex;
+    gap: 2rem;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    position: fixed;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btnSlides button{
+    border: none;
+    background: transparent;
+    
+}
+
+@media screen and (min-width: 900px){
+
+.slide{
+/* 
+    display: grid;
+grid-template-columns: 1fr 1fr; */
+flex-direction: row;
+gap: 0;
+width: 100%;
+margin: 0 auto;
+}
+
+.testimonial__container{
+width: 70%;
+margin: 0 auto;
+}
+
+.testimonial .img__slide{
+    width: 400px;
+    height: 400px;
+    border-radius: 1rem;
+    box-shadow: 0px 20px 20px rgb(0, 0, 0, 0.1);
+}
+
+.testi__content{
+align-items: start;
+    text-align: left;
+    z-index: 10;
+}
+
+
+.testi__content p{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.testi__content .details{
+flex-direction: row;
+text-align: left;
+justify-content: center;
+align-items: center;
+gap: 1rem;
+}
+
+
+.btnSlides{
+
+    position: fixed;
+    top: 83%;
+    left: 69%;
+
+}
+
+
+}
+
+
+
+/* the challenge is how to place the slide on eachother: how i did it:
+ i have a section wrapper which contain a container and then the slides;
+  the container is set to position relative and width 100%; 
+  and then the slide is set to positiion absolut ant top 0 and left 0; */
