@@ -5,60 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
   <link rel="stylesheet" href="style.css">
-  
   <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+
   
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+<script src="script.js" defer></script>
 </head>
 <body>
-  
-  <div class="hero">
-  <div class="slide">
-    <img class="slide__img"src="/images/image-tanya.jpg" alt="Tanya" />
-    <img class="slide__img"src="/images/image-john.jpg" alt="John" />
-  </div>
+  <section class="testimonial__wrapper">
+    <div class="slider testimonial__container">
+     
+      <div class="btnSlides">
+        <button class="prevSlide"><img src="images/icon-prev.svg" alt=""></button>
+        <button class="nextSlide"><img src="images/icon-next.svg" alt=""></button>
+      </div>
+      
+      <div data-index="1" class="slide testimonial slide__active slide__1">
+        <div class="testi__content">
+          <p>“ I’ve been interested in coding for a while but never taken the jump, until now. 
+            I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
+            excited about the future. ”</p>
+            
+            <div class="details">
+              <span class="name">  Tanya Sinclair
+              </span>
+              <span class="job">  UX Engineer</span>
+            </div>
+          </div>
+                      <div class="image__slide">
+                        <img class="img__slide" src="images/image-tanya.jpg" alt="">
+                      </div>
+                  
+      </div>
 
-    <div class="slider__btn">
- <button class="btn prev__btn" type=""><img src="/images/icon-prev.svg" alt="" /></button>
-      <button class="btn next__btn" type=""><img src="/images/icon-next.svg" alt="" /></button>
+      <div  data-index="2" class="slide testimonial slide__2">
+        <div class="testi__content">
+          <p>“ If you want to lay the best foundation possible I’d recommend taking this course. 
+            The depth the instructors go into is incredible. I now feel so confident about 
+            starting up as a professional developer. ”</p>
+            
+            <div class="details">
+              <span class="name">   John Tarkpor    </span>
+              <span class="job"> Junior Front-end Developerr</span>
+            </div>
+          </div>
+                      <div class="image__slide">
+                      <img  class="img__slide"  src="images/image-john.jpg" alt="">
+                      </div>
+          </div>
     </div>
-  </div>
-  
+  </section>
+
   
 
-<div class="Testimonials">
-  
-  <div class="slide testimonial">
-    <p>  “ I’ve been interested in coding for a while but never taken the jump, until now.
-  I couldn’t recommend this course enough. I’m now in the job of my dreams and so
-  excited about the future. ”</p>
-  
-  <h3>Tanya Sinclair</h3>
-  <p class="tittle">UX Engineer</p>
-  </div>
 
-  <div class="slide testimonial">
-    <p>   “ If you want to lay the best foundation possible I’d recommend taking this course.
-  The depth the instructors go into is incredible. I now feel so confident about
-  starting up as a professional developer. ”</p>
+
   
-  <h3>John Tarkpor</h3>
-  <p class="tittle">Junior Front-end Developer</p>
-  </div>
-</div>
   
-<!--   
-<div class="attribution">
-  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-  Coded by <a href="#">Your Name Here</a>.
-</div> -->
-  
-  <script defer src="script.js"></script>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
 </body>
 </html>
